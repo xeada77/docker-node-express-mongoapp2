@@ -1,0 +1,18 @@
+console.log("Oh Yeah!");
+const express = require('express');
+const database = require('./database');
+const app = express();
+
+database.initializeMongo();
+
+app.get('/', (req, res) => {
+    res.send('Hola Mundo');
+});
+
+app.get('/testFind', (req, res) => {
+    database.Kitten.find((err, kittens) => {
+        if (err) return res.error(err);
+        console.log(kittens);
+        res.json(kittens);
+    });
+});
