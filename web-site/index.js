@@ -17,6 +17,10 @@ app.get('/testFind', (req, res) => {
     });
 });
 
+app.get('/home', (req, res) => {
+    res.send('<h1>Hola Mundo otra vez</h1>');
+});
+
 app.listen(3000, () => {
     console.log('Servidor escuchando en el puerto 3000.');
 });
