@@ -6,14 +6,14 @@ var kittySchema = mongoose.Schema({
     name: String,
 });
 
-Kitten = exports.Kitten = mongoose.Model('Kitten', kittySchema);
+Kitten = exports.Kitten = mongoose.model('Kitten', kittySchema);
 
 exports.initializeMongo = function() {
     mongoose.connect(DATABASE_CONNECTION);
 
     console.log('Intentando conectarse a ' + DATABASE_CONNECTION);
 
-    var db = mongoose.connection();
+    var db = mongoose.connection;
     db.on('error', console.error.bind('Sucedio un error durante la conexion.'));
     db.once('open', function () {
         console.log('Conexion exitosa con la base de datos');

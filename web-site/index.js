@@ -16,3 +16,7 @@ app.get('/testFind', (req, res) => {
         res.json(kittens);
     });
 });
+
+app.listen(3000, () => {
+    console.log('Servidor escuchando en el puerto 3000.');
+});
