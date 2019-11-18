@@ -18,7 +18,7 @@ app.get('/testFind', (req, res) => {
 });
 
 app.get('/home', (req, res) => {
-    res.send('<h1>Hola Mundo</h1>');
+    res.send('<h1>Hola Mundo. Mundial</h1>');
 });
 
 app.listen(3000, () => {
